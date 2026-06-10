@@ -1,0 +1,6 @@
+{
+  "name": "Tasbih Counter",
+  "description": "A beautiful and modern Islamic Tasbih Counter with multiple Dhikr presets, history tracking, target goals, sounds, and vibration feedback.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
