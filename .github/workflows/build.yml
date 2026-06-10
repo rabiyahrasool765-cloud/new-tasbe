@@ -9,8 +9,14 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+      - name: Fix Gradle version
+        run: sed -i 's/gradle-8.14.5-bin.zip/gradle-9.3.1-bin.zip/' gradle/wrapper/gradle-wrapper.properties
       - name: Make gradlew executable
         run: chmod +x ./gradlew
+      - name: Remove local.properties
+        run: rm -f local.properties
       - name: Build APK
         run: ./gradlew assembleDebug
       - uses: actions/upload-artifact@v4
