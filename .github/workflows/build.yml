@@ -18,7 +18,7 @@ jobs:
       - name: Remove local.properties
         run: rm -f local.properties
       - name: Create env file
-        run: cp .env.example .env
+        run: touch .env
       - name: Build APK
         run: ./gradlew assembleDebug
       - uses: actions/upload-artifact@v4
